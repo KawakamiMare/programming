@@ -8,13 +8,13 @@
     </head>
     <body class= "antialiased">
         <h1>Blog Name</h1>
+        <a href='/posts/create'>create</a>
         <div class='posts'>
             @foreach($posts as $post) 
             <div class='post'>
-                <h2 class='title'>{{ $post->title}}
-                    <a href="/posts/{{ $post->id }}">{{ $post->title}}</a>
-                <p class='body'>{{ $post->body }}</p>
-                </h2>
+              <a href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title}}</a>
+              <p class='body'>{{ $post->body }}</p>
+                
             </div>
         @endforeach
         </div>
